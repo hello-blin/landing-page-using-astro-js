@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Showcase from "../components/Showcase.astro";
+import Features from "../components/Features.astro";
+import Tabs from "../components/Tabs.astro";
+import Footer from "../components/Footer.astro";
+
+import "../styles/globals.css";
+---
+
+<Layout>
+  <Showcase showExtra={false} />
+  <Features />
+  <section class="page-content">
+    <div class="container">
+      <h2>Get Started With Astro</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero possimus
+        iure culpa accusamus. Ullam iste eveniet, necessitatibus consectetur,
+        illo molestiae consequatur esse perspiciatis laborum beatae, dicta cum
+        tenetur minima vero.
+      </p>
+      <Tabs activeColor="#a741ff" headings={["LA", "LI", "L"]} contents={["sa", "as", "as"]} />
+      <h3>Lorem ipsum dolor</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum
+        deserunt inventore ut voluptate, officia maiores repellat tenetur
+        praesentium omnis est ex tempora a necessitatibus reiciendis at et
+        dignissimos. Ipsam eius consequuntur cupiditate aperiam porro, esse
+        laborum impedit nesciunt ut voluptatum assumenda aspernatur libero iusto
+        error molestias dolorum, necessitatibus labore?
+      </p>
+    </div>
+  </section>
+<Footer />
+</Layout>

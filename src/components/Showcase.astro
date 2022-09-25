@@ -1,0 +1,37 @@
+---
+export interface Props {
+  heading?: string;
+  textArea?: string;
+  showExtra?: boolean;
+}
+
+
+const {
+  heading = "Excited to learn about this thing called Astro or whatever",
+  textArea = "Yeah, let's go",
+  showExtra = false,
+} = Astro.props as Props;
+
+import LogoSmall from "../images/framework-logos-small.png";
+import Logo from "../images/framework-logos.png";
+---
+
+<section class="showcase">
+  <div class="showcase-text">
+    <h1>{heading}</h1>
+    <p>{textArea}</p>
+  </div>
+  {showExtra &&  <div class="showcase-img">
+    <img class="logos" src={Logo} alt="" />
+    <img class="logos-small" src={LogoSmall} alt="" />
+  </div>}
+
+
+  <p class="showcase-demo">
+    <small>This is a demo website used for the YouTube crash course</small>
+  </p>
+</section>
+
+<style>
+
+</style>

@@ -1,0 +1,41 @@
+---
+export interface Props {
+  cardTitle?: string;
+  content?: string;
+  dark?: boolean;
+}
+
+let { cardTitle, content, dark = false } = Astro.props as Props;
+---
+
+<div class={`card ${dark && "dark"}`}>
+  <h3>{cardTitle}</h3>
+  <p>
+    {content} 
+  </p>
+</div>
+
+<style>
+  .card {
+    background: #fff;
+    padding: 15px 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  .dark {
+    background: var(--color-primary);
+    color: #ffffff;
+  }
+
+  @media screen and (max-width: 500px) {
+    .features .container {
+      grid-template-columns: 1fr;
+    }
+
+    .card p{
+        font-size: 11px;
+    }
+  }
+</style>
